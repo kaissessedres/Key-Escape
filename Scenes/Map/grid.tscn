@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://b024jq8olck0f"]
+
+[ext_resource type="Texture2D" uid="uid://d2dfn2x7ipfak" path="res://addons/modular graveyard/Objects/Graveyard_alb.png" id="1_f2fds"]
+[ext_resource type="ArrayMesh" uid="uid://ircrhr7d43pv" path="res://addons/modular graveyard/Objects/OBJ/Railings/Standard/Tall/TallRailing3.obj" id="1_xaao1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mkdyy"]
+albedo_texture = ExtResource("1_f2fds")
+texture_filter = 0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i80w3"]
+size = Vector3(2.5, 2.5, 0.5)
+
+[node name="Node3D" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_mkdyy")
+mesh = ExtResource("1_xaao1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 1.5, 0)
+shape = SubResource("BoxShape3D_i80w3")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bm62a4os28ott"]
+
+[ext_resource type="PackedScene" uid="uid://cko6gyo0qmlgh" path="res://addons/tree_pack_1.1/models/tree01.fbx" id="1_l4utk"]
+[ext_resource type="Texture2D" uid="uid://db6ynfmeh3ylx" path="res://addons/tree_pack_1.1/textures/tree01.png" id="2_6isnj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p81p1"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("2_6isnj")
+texture_filter = 0
+
+[node name="Root Scene" instance=ExtResource("1_l4utk")]
+
+[node name="tree01" parent="RootNode" index="0"]
+material_override = SubResource("StandardMaterial3D_p81p1")

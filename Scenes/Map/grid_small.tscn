@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://hn4364ew86s1"]
+
+[ext_resource type="Texture2D" uid="uid://d2dfn2x7ipfak" path="res://addons/modular graveyard/Objects/Graveyard_alb.png" id="1_h44m3"]
+[ext_resource type="ArrayMesh" uid="uid://claesso2riqhi" path="res://addons/modular graveyard/Objects/OBJ/Railings/Rusty/Tall/RustyTallRailing2.obj" id="1_rpnkn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3vmvt"]
+albedo_texture = ExtResource("1_h44m3")
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_o1v3d"]
+points = PackedVector3Array(1.8478, 2.51093, 0.0529405, 0.126912, 0.119216, -0.0309914, 0.251135, 0.102485, -0.0299349, 1.76393, 2.59508, -0.0729881, 0.210955, 2.67895, 0.0529405, 1.80587, 0.034812, 0.0529405, 0.210955, 2.59508, -0.0729881, 1.88991, 0.119216, -0.0309914, 0.126912, 0.161024, 0.0529405, 1.80587, 2.72102, -0.0309914, 0.126912, 2.30111, -0.0309914, 1.80587, 2.38499, -0.0729881, 1.80587, 2.67895, 0.0529405, 1.88991, 2.30111, -0.0309914, 1.88991, 0.161024, 0.0529405, 0.210955, 2.72102, -0.0309914, 0.210955, 0.034812, 0.0529405, 0.126912, 2.30111, 0.0529405, 0.210955, 2.38499, -0.0729881, 1.88991, 2.30111, 0.0529405, 1.80587, 2.55301, -0.0729881, 0.16902, 2.55301, 0.0529405)
+
+[node name="Node3D" type="StaticBody3D"]
+
+[node name="RustyTallRailing2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.482558, 0, 1.19626)
+material_override = SubResource("StandardMaterial3D_3vmvt")
+mesh = ExtResource("1_rpnkn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.482558, 0, 1.19626)
+shape = SubResource("ConvexPolygonShape3D_o1v3d")

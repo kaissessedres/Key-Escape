@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cvmwst30hqmij"
+path="res://.godot/imported/RustyLowRailingOpen1.obj-a8728ae645d8e79ac93c8d99c84b9097.mesh"
+
+[deps]
+
+files=["res://.godot/imported/RustyLowRailingOpen1.obj-a8728ae645d8e79ac93c8d99c84b9097.mesh"]
+
+source_file="res://addons/modular graveyard/Objects/OBJ/Railings/Rusty/Low/RustyLowRailingOpen1.obj"
+dest_files=["res://.godot/imported/RustyLowRailingOpen1.obj-a8728ae645d8e79ac93c8d99c84b9097.mesh", "res://.godot/imported/RustyLowRailingOpen1.obj-a8728ae645d8e79ac93c8d99c84b9097.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://cliqmjd14un54"]
+
+[ext_resource type="Texture2D" uid="uid://d2dfn2x7ipfak" path="res://addons/modular graveyard/Objects/Graveyard_alb.png" id="1_j0ci6"]
+[ext_resource type="ArrayMesh" uid="uid://dmec6fcs1c4wq" path="res://addons/modular graveyard/Objects/OBJ/Railings/Rusty/Tall/RustyTallRailingPillar.obj" id="1_txm2p"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_huns0"]
+albedo_texture = ExtResource("1_j0ci6")
+texture_filter = 0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_va8wa"]
+points = PackedVector3Array(-0.244248, 2.42106, -0.180535, -0.244248, 2.42106, 0.20552, 0.184707, -0.0233798, 0.20552, -0.201339, -0.0233798, -0.180535, 0.184707, 2.59277, -0.223448, -0.201339, -0.0233798, 0.20552, 0.166102, 0.108917, -0.163998, 0.227617, 2.59277, 0.20552, -0.201339, 2.72175, -0.180535, 0.227617, 2.63549, -0.180535, -0.201339, 2.37834, -0.223448, -0.201339, 2.67849, 0.20552, 0.184707, 2.67849, 0.20552, 0.227617, 2.37834, -0.180535, 0.184707, 2.37834, -0.223448, -0.244248, 2.59277, 0.162606, -0.201339, 2.59277, -0.223448, 0.227617, 2.37834, 0.20552, -0.244248, 2.59277, -0.180535, -0.244248, 2.50678, 0.20552)
+
+[node name="Node3D" type="StaticBody3D"]
+
+[node name="RustyTallRailingPillar" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_huns0")
+mesh = ExtResource("1_txm2p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_va8wa")

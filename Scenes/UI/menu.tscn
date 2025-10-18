@@ -1,0 +1,150 @@
+[gd_scene load_steps=11 format=3 uid="uid://bviwjv1xno5st"]
+
+[ext_resource type="FontFile" uid="uid://q6xerwuep8f6" path="res://addons/PressStart2P.ttf" id="1_hxw4g"]
+[ext_resource type="Script" path="res://Scenes/UI/Button.gd" id="3_l4wut"]
+[ext_resource type="Script" path="res://Scenes/UI/Button2.gd" id="4_6a1bl"]
+
+[sub_resource type="Theme" id="Theme_8r0qd"]
+default_font = ExtResource("1_hxw4g")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7oye0"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7n1tk"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f55tv"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mxfnd"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tdr17"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Theme" id="Theme_o31av"]
+default_font = ExtResource("1_hxw4g")
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_disabled_color = Color(1, 1, 1, 1)
+Button/colors/font_focus_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(1, 1, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 1, 0, 1)
+Button/colors/icon_disabled_color = Color(0, 0, 0, 1)
+Button/colors/icon_focus_color = Color(0, 0, 0, 1)
+Button/colors/icon_hover_color = Color(0, 0, 0, 1)
+Button/colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/icon_normal_color = Color(0, 0, 0, 1)
+Button/colors/icon_pressed_color = Color(0, 0, 0, 1)
+Button/constants/h_separation = 0
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("1_hxw4g")
+Button/styles/disabled = SubResource("StyleBoxFlat_7oye0")
+Button/styles/focus = SubResource("StyleBoxFlat_7n1tk")
+Button/styles/hover = SubResource("StyleBoxFlat_f55tv")
+Button/styles/normal = SubResource("StyleBoxFlat_mxfnd")
+Button/styles/pressed = SubResource("StyleBoxFlat_tdr17")
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -330.0
+offset_top = -220.0
+offset_right = 330.0
+offset_bottom = -151.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_8r0qd")
+theme_override_fonts/font = ExtResource("1_hxw4g")
+theme_override_font_sizes/font_size = 60
+text = "Key Escape!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -358.0
+offset_top = -166.0
+offset_right = 358.0
+offset_bottom = -85.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_8r0qd")
+theme_override_fonts/font = ExtResource("1_hxw4g")
+theme_override_font_sizes/font_size = 15
+text = "Collect all 4 keys to escape the graveyard! Use 'WASD' keys to move and 'Shift' to run!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 1.2)
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_o31av")
+theme_override_fonts/font = ExtResource("1_hxw4g")
+theme_override_font_sizes/font_size = 30
+text = "Play"
+script = ExtResource("3_l4wut")
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme = SubResource("Theme_o31av")
+theme_override_fonts/font = ExtResource("1_hxw4g")
+theme_override_font_sizes/font_size = 30
+text = "Quit"
+script = ExtResource("4_6a1bl")
+
+[connection signal="pressed" from="VBoxContainer/Button" to="VBoxContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="VBoxContainer/Button2" method="_on_pressed"]

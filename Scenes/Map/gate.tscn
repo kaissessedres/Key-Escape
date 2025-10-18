@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://d15os54glc3dr"]
+
+[ext_resource type="ArrayMesh" uid="uid://csambebdttedc" path="res://addons/modular graveyard/Objects/OBJ/Gates/Rusty/RustyGateKeyR.obj" id="1_0c01u"]
+[ext_resource type="Texture2D" uid="uid://d2dfn2x7ipfak" path="res://addons/modular graveyard/Objects/Graveyard_alb.png" id="1_saqj8"]
+[ext_resource type="ArrayMesh" uid="uid://6v35koiuowq6" path="res://addons/modular graveyard/Objects/OBJ/Gates/Rusty/RustyGateKeyL.obj" id="2_l5ds4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_702sm"]
+albedo_texture = ExtResource("1_saqj8")
+texture_filter = 0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g0s7l"]
+size = Vector3(3.5, 2.9, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_32bs2"]
+albedo_texture = ExtResource("1_saqj8")
+texture_filter = 0
+
+[node name="StaticBody3D" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0336, 0.567734, -28.4801)
+
+[node name="RustyGateKeyR" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_702sm")
+mesh = ExtResource("1_0c01u")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.85, 1.5, 0)
+shape = SubResource("BoxShape3D_g0s7l")
+
+[node name="RustyGateKeyL" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.75, 0, 0)
+material_override = SubResource("StandardMaterial3D_32bs2")
+mesh = ExtResource("2_l5ds4")

@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5hdkbhr7kkma"]
+
+[ext_resource type="Texture2D" uid="uid://c4xengdvsg4pi" path="res://addons/Dirt/Dirt_20-512x512.png" id="1_jckjp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ivll"]
+albedo_texture = ExtResource("1_jckjp")
+uv1_scale = Vector3(100, 100, 1)
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_brrbw"]
+material = SubResource("StandardMaterial3D_2ivll")
+size = Vector3(100, 1, 100)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ebaol"]
+size = Vector3(100, 1, 100)
+
+[node name="Node3D" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_brrbw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_ebaol")

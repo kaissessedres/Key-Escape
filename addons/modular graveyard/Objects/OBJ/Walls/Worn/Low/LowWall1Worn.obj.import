@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bbvo2ym3c7g5f"
+path="res://.godot/imported/LowWall1Worn.obj-87688833c4f95a44dad28ac23913e0fc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/LowWall1Worn.obj-87688833c4f95a44dad28ac23913e0fc.mesh"]
+
+source_file="res://addons/modular graveyard/Objects/OBJ/Walls/Worn/Low/LowWall1Worn.obj"
+dest_files=["res://.godot/imported/LowWall1Worn.obj-87688833c4f95a44dad28ac23913e0fc.mesh", "res://.godot/imported/LowWall1Worn.obj-87688833c4f95a44dad28ac23913e0fc.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

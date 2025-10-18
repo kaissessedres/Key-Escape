@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://duhm267twfsso"
+path="res://.godot/imported/BigRock2.obj-2beb2718ed4da250205704f34cf9bd9e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/BigRock2.obj-2beb2718ed4da250205704f34cf9bd9e.mesh"]
+
+source_file="res://addons/modular graveyard/Objects/OBJ/Rocks/Big/BigRock2.obj"
+dest_files=["res://.godot/imported/BigRock2.obj-2beb2718ed4da250205704f34cf9bd9e.mesh", "res://.godot/imported/BigRock2.obj-2beb2718ed4da250205704f34cf9bd9e.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

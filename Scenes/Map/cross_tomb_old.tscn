@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://cd28pbd05mi4e"]
+
+[ext_resource type="Texture2D" uid="uid://d2dfn2x7ipfak" path="res://addons/modular graveyard/Objects/Graveyard_alb.png" id="1_yjtg3"]
+[ext_resource type="ArrayMesh" uid="uid://dyqgwy7xp2p1y" path="res://addons/modular graveyard/Objects/OBJ/Tombs/Old/CrossTombOld.obj" id="2_or7u4"]
+[ext_resource type="ArrayMesh" uid="uid://d688iieowc17" path="res://addons/modular graveyard/Objects/OBJ/Tombs/Dirt.obj" id="3_qqs67"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5st4y"]
+albedo_texture = ExtResource("1_yjtg3")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5bw4p"]
+albedo_texture = ExtResource("1_yjtg3")
+texture_filter = 0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_13xoj"]
+radius = 0.253477
+height = 1.52219
+
+[node name="Grave" type="StaticBody3D"]
+
+[node name="CrossTombOld" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.275925, 0, 0.909158)
+material_override = SubResource("StandardMaterial3D_5st4y")
+mesh = ExtResource("2_or7u4")
+
+[node name="Dirt" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.203492, 0, 2.61083)
+material_override = SubResource("StandardMaterial3D_5bw4p")
+mesh = ExtResource("3_qqs67")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.275925, 0.432983, 0.909158)
+shape = SubResource("CapsuleShape3D_13xoj")
